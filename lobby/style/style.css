@@ -385,6 +385,15 @@ nav > a#elvish:hover{
     width: 40%;
     letter-spacing: 1px;
     color: var(--cor0);
+    cursor: default;
+    font-size: medium;
+    transition: 300ms ease-in-out;
+}
+.card-text:hover {
+    font-weight: bold;
+    transform: translateY(-10%);
+    transition: 300ms ease-in-out;
+    text-shadow: 1px 1px 2px var(--cor0);
 }
 
 .card-wrapper {
