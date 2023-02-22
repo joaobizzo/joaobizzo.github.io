@@ -24,6 +24,7 @@ body{
     padding: 0px;
     margin: 0px;
     overflow-x: hidden  ;
+    max-width: fit-content;
     
 }
 
@@ -60,7 +61,7 @@ body{
 
 .header > h1{
     font-size: 55px;
-    text-shadow: 2px 2px 1px var(--cor4);
+    text-shadow: 2px 2px 4px var(--cor3);
     transition-duration: 600ms;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -174,19 +175,21 @@ body{
 /*texto do menu - ajustar*/ 
 .menu-items ul li a {
     margin: 10px 0;
-    margin-right: 100px;
+    margin-right: 120px;
     justify-content: center;
     display: flex;
-
+    height: 80px;
+    align-items: center;
     color: var(--cor3);
     text-decoration: none;
     text-transform: none;
     letter-spacing: 3px;
-    font-size: 40px;
+    font-size: 30px;
     transition-duration: 800ms;
 }
 .menu-items ul li a:hover{
-    background-color: var(--cor0);
+    font-size: 45px;
+    font-weight: bolder;
     color: var(--cor4);
     border-radius: 7px;
     transition: .2s ease-in-out;
@@ -216,7 +219,7 @@ body{
 }
 #toggle:checked ~ .menu {
     height: auto;
-    box-shadow: 0px 0px 30px 30vmax rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 30px 25vmax rgba(255, 255, 255, 0.75);
     z-index: 1;
 }
 #toggle:checked ~ .menu-items {
@@ -225,13 +228,19 @@ body{
 }
 
 nav {
-    font-size: 15px;
- 
+    font-size: 10px; 
+    top: 0;
 }
 nav > a{
     color: var(--cor0);
     text-decoration: none;
     transition-duration: 300ms;
+    text-decoration: none;
+    padding: 3px 8px;
+    border: 1px solid var(--cor0);
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
 }
 
 
@@ -241,55 +250,73 @@ nav > a#elvish{
 nav > a#en:hover{
     background-image: linear-gradient(to top, blue, red);
     color: whitesmoke;
-    border-radius: 7px;
 }
 nav > a#pt-br:hover{
     background-color: green;
     color: yellow;
-    border-radius: 7px;
 }
 nav > a#esp:hover{
     background-color: red;
     color: yellow;
-    border-radius: 7px;
 }
 nav > a#elvish:hover{
     background-color: goldenrod;
     color: whitesmoke;
-    border-radius: 7px;
     font-family: elvish Regular;
 }
 
 
 
 
-#first-block {
+.first-block {
     
     min-height: 1000px;
-    width: 94%;
+    width: 88%;
     box-shadow: 0px 0px 10px #0c002076;
     border-radius: 16px;
     background-color: #fc37935e;
     text-align: center;
     font-family: var(--fonte-padrao);
+    padding: 40px;
 }
 
-
-section > h2{
-    color: var(--cor4);
+.first-block h2 {
+    color: var(--cor0);
     font-size: 4.5em;
-    padding-top: 60px;
     text-decoration: dotted;
+    text-shadow: 2px 3px 4px var(--cor1);;
 }
-section > p{
-    color: var(--cor4);
-    font-size: 2em;
-    margin-left: 60px;
-    margin-right: 60px;
+
+.first-block p {
+    color: var(--cor0);
+    font-size: 1.5em;
+    margin-left: 100px;
+    margin-right: 100px;
 }
+
+.first-block ol li {
+    list-style: none;
+    font-size: 1.4em;
+}
+.first-block #button {
+    visibility: hidden;
+}
+
 
 
 /*PROJETO CARDS*/
+.container h1 {
+    margin-top: 140px;
+    margin-right: 100px;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    color: var(--cor1);
+    font-size: 5.5em;
+    text-decoration: dotted;
+    text-shadow: 2px 3px 8px var(--cor3);
+}
+
 .container {
     height: auto;
     width: 100%;
@@ -310,7 +337,7 @@ section > p{
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,7 +348,6 @@ section > p{
     background-repeat: no-repeat;
     filter: grayscale(50%);
     color: var(--cor0);
-    text-decoration: underline;
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
@@ -346,11 +372,13 @@ section > p{
 .card-wrapper::before {
     content: '';
     position: absolute;
-    height: 100px;
-    height: 100px;
-    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
     display: block;
     border: 1px solid var(--cor0);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
 
 }
 
@@ -369,4 +397,32 @@ section > p{
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.5s ease-in-out;
+    text-decoration: underline;
 }
+
+.card:hover {
+    filter: unset;
+}
+.card:hover > .card-wrapper::before {
+    content: '';
+    height: 250px;
+    width: 250px;
+    opacity: 1;
+}
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 35px;
+    background-color: var(--cor1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor4);
+    font-weight: bold;
+} 
