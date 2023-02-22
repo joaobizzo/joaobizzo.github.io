@@ -323,12 +323,12 @@ nav > a#elvish:hover{
 
 /* AREA MEU PERFIL */
 #meu-perfil {
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
 /* AREA MINHA HISTORIA*/
 #minha-historia {
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
 /*PROJETO CARDS*/
