@@ -1,19 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome </title>
-    <link rel="stylesheet" href="style.css">
+    <title>João Brandt</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Welcome to My website!</h1>
-    <p> Please, choose your version: </p>
-    <p>
-        <a href="../test/index.html" class="link">Test / Zero version</a>
-        <a href="../firstVersion/index.html" class="link">First Version</a>
-    </p>
+    <header class="header-container">
+        <div class="header">
+             <nav>
+                <a href="index_en.html" id="en">English</a>
+                <a href="index.html" id="pt-br">Portugues</a>
+                <a href="index_esp.html" id="esp">Español</a>
+            </nav> 
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox"  id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu"></div>
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="#">Home </a>
+                            </li>
+                            <li>
+                                <a href="#">Meu Perfil </a>
+                            </li>
+                            <li>
+                                <a href="#">Minha história</a>
+                            </li>
+                            <li>
+                                <a href="#">Projetos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <h1>João Brandt</h1>
+            <div">
+                <img src="files/foto_eu_quadrado.jpg" alt="foto_eu" id="foto">
+            </div>
+            <h2>Full-stack dev student</h2>
+            <div class="social-media">
+                <a href="">Linkedin</a>
+                <a href="">GitHub</a>
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <article>
+            <section id="first-block">
+                
+                <div class="meu-perfil">
+                    <h2>Meu Perfil</h2>
+                </div>
+
+                <div class="minha-historia">
+                    <h2>Minha historia</h2>
+                    <ol>
+                        <li>2017</li>
+                        <li>2018</li>
+                        <li>2019</li>
+                        <li><strong>2020</strong></li>
+                        <div> <input type="button" value="BOTÃO" id="button"></div>
+                        <li>2021</li>
+                        <li>2022</li>
+                        <li>2023</li>
+                    </ol>
+                </div>
+
+            </section>
+            <section id="second_block">
+
+
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-wrapper">
+                            <h2>Projeto 1</h2>
+                            <p>Vem ver</p>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, maiores. Dolor asperiores voluptas totam veritatis beatae, voluptates, delectus explicabo ab laudantium libero cupiditate molestiae reprehenderit, culpa esse architecto repudiandae quibusdam.
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-wrapper">
+                            <h2>Projeto 2</h2>
+                            <p>Vem ver</p>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, maiores. Dolor asperiores voluptas totam veritatis beatae, voluptates, delectus explicabo ab laudantium libero cupiditate molestiae reprehenderit, culpa esse architecto repudiandae quibusdam.
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-wrapper">
+                            <h2>Projeto 3</h2>
+                            <p>Vem ver</p>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, maiores. Dolor asperiores voluptas totam veritatis beatae, voluptates, delectus explicabo ab laudantium libero cupiditate molestiae reprehenderit, culpa esse architecto repudiandae quibusdam.
+                    </div>
+                </div>
+
+
+            </section>
+        </article>
+    </main>
+    
+    <footer class=" footer">
+
+    </footer>
     
 </body>
 </html>

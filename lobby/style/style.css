@@ -1,0 +1,372 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: elvish Regular;
+    src: url(Elvish-6PPo.ttf);
+}
+
+:root{
+
+    --cor0:#FFF9FD;
+    --cor1:#FC3792;
+    --cor2:#B2228E;
+    --cor3:#26183D;
+    --cor4:#0C0020;
+
+    --fonte-padrao: 'Poppins', sans-serif;
+    --fonte-destaque:'Bebas Neue', cursive;
+}
+body{
+    background-color: var(--cor4);
+    font-family: var(--fonte-padrao);
+    color: #FFF9FD;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden  ;
+    
+}
+
+/* HEADER */
+
+.header-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    background-image: linear-gradient(var(--cor1),var(--cor2), var(--cor3), var(--cor4));
+    background-attachment: scroll; 
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: flex-start;*/
+    text-align: center;
+    padding: 0;
+    position: relative;
+    
+}
+
+#foto{
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+
+}
+
+.header > h1{
+    font-size: 55px;
+    text-shadow: 2px 2px 1px var(--cor4);
+    transition-duration: 600ms;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    
+}
+
+.header > h2{
+    letter-spacing: 4px;
+}
+
+
+.social-media{
+    margin-top: 1rem;
+}
+
+.social-media a{
+    text-decoration: none;
+    color: var(--cor0);
+    padding: 1rem 4rem;
+    border: 1px solid var(--cor0);
+    min-width: 4rem;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.social-media a:hover {
+    background-color: var(--cor0);
+    color: var(--cor4);
+    font-weight: bold;
+
+}
+
+
+
+/* MENU BURGER */ 
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: var(--cor4);
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(0);
+}
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(0);
+}
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle {
+    display: none;
+}
+
+/* MENU */
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-content: right;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+.menu-items ul {
+    list-style-type: none;
+}
+/*texto do menu - ajustar*/ 
+.menu-items ul li a {
+    margin: 10px 0;
+    margin-right: 100px;
+    justify-content: center;
+    display: flex;
+
+    color: var(--cor3);
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 3px;
+    font-size: 40px;
+    transition-duration: 800ms;
+}
+.menu-items ul li a:hover{
+    background-color: var(--cor0);
+    color: var(--cor4);
+    border-radius: 7px;
+    transition: .2s ease-in-out;
+}
+
+
+/* ANIMAÇÃO DO MENU */
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toggle:checked + .checkbox{
+    background-color: transparent;
+}
+#toggle:checked ~ .menu {
+    height: auto;
+    box-shadow: 0px 0px 30px 30vmax rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+#toggle:checked ~ .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav {
+    font-size: 15px;
+ 
+}
+nav > a{
+    color: var(--cor0);
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+
+
+nav > a#elvish{
+    font-family: elvish Regular;
+}
+nav > a#en:hover{
+    background-image: linear-gradient(to top, blue, red);
+    color: whitesmoke;
+    border-radius: 7px;
+}
+nav > a#pt-br:hover{
+    background-color: green;
+    color: yellow;
+    border-radius: 7px;
+}
+nav > a#esp:hover{
+    background-color: red;
+    color: yellow;
+    border-radius: 7px;
+}
+nav > a#elvish:hover{
+    background-color: goldenrod;
+    color: whitesmoke;
+    border-radius: 7px;
+    font-family: elvish Regular;
+}
+
+
+
+
+#first-block {
+    
+    min-height: 1000px;
+    width: 94%;
+    box-shadow: 0px 0px 10px #0c002076;
+    border-radius: 16px;
+    background-color: #fc37935e;
+    text-align: center;
+    font-family: var(--fonte-padrao);
+}
+
+
+section > h2{
+    color: var(--cor4);
+    font-size: 4.5em;
+    padding-top: 60px;
+    text-decoration: dotted;
+}
+section > p{
+    color: var(--cor4);
+    font-size: 2em;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+/*PROJETO CARDS*/
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor1);
+    background-image: url('/files/foto_eu_quadrado.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
+    color: var(--cor0);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.card-text {
+    width: 40%;
+    letter-spacing: 1px;
+    color: var(--cor0);
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid var(--cor0);
+
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper p {
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
