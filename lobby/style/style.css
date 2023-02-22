@@ -65,7 +65,7 @@ body{
     text-shadow: 2px 2px 4px var(--cor3);
     transition-duration: 600ms;
     letter-spacing: 4px;
-    text-transform: uppercase;
+    text-transform: none;
     
 }
 
