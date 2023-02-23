@@ -30,6 +30,15 @@ body{
     
 }
 
+.flip {
+    transform: rotate(180deg);
+}
+.blob-motion {
+    position: absolute;
+    transform: translate(-48%, -93%);
+    z-index: -1;
+}
+
 /* HEADER */
 
 .spacer {
@@ -49,7 +58,7 @@ body{
     width: 100vw;
     display: flex;
     margin-bottom: 70px;
-    background-image: url('/files/');
+    background-image: url('/files/waves/waves2.svg.');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
