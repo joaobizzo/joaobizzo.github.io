@@ -30,14 +30,6 @@ body{
     
 }
 
-.flip {
-    transform: rotate(180deg);
-}
-.blob-motion {
-    position: absolute;
-    transform: translate(-48%, -93%);
-    z-index: -1;
-}
 
 /* HEADER */
 
@@ -58,7 +50,7 @@ body{
     width: 100vw;
     display: flex;
     margin-bottom: 70px;
-    background-image: url('/files/waves/waves2.svg.');
+    background-image: url('/files/');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -72,6 +64,16 @@ body{
     padding: 0;
     position: relative;
     
+}
+
+/*blob animation*/
+.flip {
+    transform: rotate(180deg);
+}
+.blob-motion {
+    position: absolute;
+    transform: translate(-48%, -93%);
+    z-index: -1;
 }
 
 #foto{
