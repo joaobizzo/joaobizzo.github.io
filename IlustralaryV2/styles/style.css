@@ -68,8 +68,13 @@ body {
     text-align: left;
 }
 
-.imagem {
+.imagem_home {
     border-radius: 20px;
+    transform: translate(10%, -20%);
+}
+.imagem_about {
+    border-radius: 20px;
+    transform: translate(10%, -10%);
 }
 .apresentacao__links{
     display: flex;
