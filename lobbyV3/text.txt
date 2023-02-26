@@ -1,0 +1,50 @@
+-perfil
+nome, infon links;
+
+-resumo
+resumo da minha historia e metas;
+
+-historia
+
+com programação:::
+2017:
+começar arduino;
+desistir arduino;
+2018:
+começar python;
+desistir python;
+2019:
+estudos para vest;
+2020:
+pizza;
+---colocar um interruprtor, um switch, de quando passei a usufruir da tecnologia
+para aprender a cria-la
+         interruprtor melhorar cores, saturação e funcionalidades
+         e ativar anotações sobre coisas do passado ex: desistencia como parte do processo
+html;
+css;
+js;
+solidity;
+2022:
+-python
+-blockchain
+- computer engineering java/c
+2023:
+-metas:
+  melhorar em tudo anterior;
+  dominar os frameworks;
+  tecnicas de clean code;
+
+
+trabalhos:::
+duf;
+(palha);
+pizza;
+everest;
+deimos;
+
+pessoais:::
+ceos;
+anojs;
+
+
