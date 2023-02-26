@@ -140,14 +140,17 @@ body {
     filter: grayscale(100%);
     transition: filter 0.2s;
     align-items: center;
+    transition: transform 0.5s;
  }
  #gallery img:hover, 
  #gallery img:focus {
     filter:none;
     transition: transform 1s;
     transform: translateX(0px) 
-    scale(1.5);
+    scale(1.2);
  }
+
+
 
  @media (max-width: 1200px) {
     #gallery {
