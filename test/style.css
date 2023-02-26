@@ -25,17 +25,19 @@ body {
     place-items: center;
 }
 
-header > h1 {
+header > h1, h2 {
     color: white;
     font-family: "Rubik", sans-serif;
-    font-size: clamp(2em, 2vh, 4em);
     font-weight: 400;
     margin: 0px;
-    padding: 20px;
+}
+header > h1 {
+    font-size: clamp(2em, 2vh, 4em);
+    padding: 10px;
     text-align: center;
 }
 
-h1 > .magic {
+header > h1 > i > .magic {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -48,4 +50,10 @@ h1 > .magic {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+header > h2 {
+    color: white;
+    text-align: end;
+    font-size: 1em;
+    transform: translateX(-25px);
 }
