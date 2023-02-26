@@ -293,9 +293,6 @@ nav > a#esp:hover{
     
     min-height: 1000px;
     width: 78%;
-    box-shadow: 0px 0px 10px #0c002076;
-    border-radius: 16px;
-    background-color: #fc37934d;
     transform: translateY(-8%);
     font-family: var(--fonte-padrao);
     padding: 20px;
