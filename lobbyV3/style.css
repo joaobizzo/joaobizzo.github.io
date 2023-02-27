@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 200% center;
+    }
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    height: 100vh;
+
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+}
+
+header > h1, h2 {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+header > h1 {
+    font-size: clamp(2em, 2vh, 4em);
+    padding: 10px;
+    text-align: center;
+    
+}
+
+header > h1 > i > .magic {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+header > h2 {
+    color: white;
+    text-align: end;
+    font-size: 1em;
+    transform: translateX(-25px);
+}
