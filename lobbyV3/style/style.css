@@ -1,21 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 @font-face {
     font-family: elvish Regular;
     src: url('/files/Elvish-6PPo.ttf');
-}
-
-:root{
-
-    --cor0:#FFF9FD;
-    --cor1:#FC3792;
-    --cor2:#B2228E;
-    --cor3:#26183D;
-    --cor4:#0C0020;
-
-    --fonte-padrao: 'Poppins', sans-serif;
-    --fonte-destaque:'Bebas Neue', cursive;
 }
 
 @keyframes background-pan {
@@ -26,6 +16,22 @@
     to {
         background-position: 200% center;
     }
+}
+
+:root{
+
+    --cor0:#FFF9FD;
+    --cor1:#FC3792;
+    --cor2:#B2228E;
+    --cor3:#26183D;
+    --cor4:#0C0020;
+
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+
+    --fonte-padrao: 'Poppins', sans-serif;
+    --fonte-destaque:'Bebas Neue', cursive;
 }
 
 body{
@@ -51,49 +57,17 @@ body{
     background-position: center;
     background-size: cover;
 }
-.layer1 {
-    background-image: url('../files/layered-waves-haikei.svg');
-}
 
-.glass {
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-
-    margin-left: 500px; margin-right: 500px;
-    transform: translateY(20px);
-}
-
-.header {
-
-
-    z-index: 2;
-}
 
 .header-container {
     height: 80vh;
     width: 100vw;
     display: flex;
     margin-bottom: 70px;
-    /*background-image: linear-gradient(165deg, var(--cor0), var(--cor1),var(--cor2), var(--cor3), var(--cor4), var(--cor4), var(--cor4));
+    background-color: var(--cor4);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;*/
-
-    animation: background-pan 3s linear infinite;
-    background: linear-gradient(
-        to right,
-        var(--cor1),
-        var(--cor2),
-        var(--cor3),
-        var(--cor2),
-        var(--cor1)
-    );
-    background-size: 200%;
-
+    background-size: contain;
     box-sizing: border-box;
 
     flex-direction: column;
@@ -104,16 +78,12 @@ body{
     padding: 0;
     position: relative;
     
+    
 }
 
 /*blob animation*/
 .flip {
     transform: rotate(180deg);
-}
-.blob-motion {
-    position: absolute;
-    transform: translate(-48%, -93%);
-    z-index: 0;
 }
 
 #foto{
@@ -135,12 +105,29 @@ body{
 
 .header > h2{
     letter-spacing: 4px;
-    z-index: 3;
+    padding: 10px;
+    font-family: "Rubik", sans-serif;
 }
 
+.header > h2 > .magic {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
 
 .social-media{
     margin-top: 1rem;
+    margin: 45px;
 }
 
 .social-media a{
