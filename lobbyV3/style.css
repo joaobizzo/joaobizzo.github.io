@@ -66,14 +66,14 @@
 body {
     background-color: var(--color_bgd);
     display: grid;
-    height: 100vh;
     width: 100wh;
     margin: 0px;
-    overflow: hidden;
+    overflow: scroll;
     place-items: center;
     cursor: default;
 
-    background-image: url(/img/backgrond_site.jpg);
+    background-image: url(img/backgrond_site.jpg);
+    background-repeat: no-repeat;
 }
 
 header {
@@ -144,3 +144,8 @@ header h2 {
     white-space: nowrap;*/
     transition: all 500ms ease-in-out;
 }
+
+
+
+
+/* PROJETOS */
