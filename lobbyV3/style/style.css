@@ -86,30 +86,26 @@ body{
     transform: rotate(180deg);
 }
 
-#foto{
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-}
 
-
-.header > h1{
+.header > #home_name{
     font-size: 55px;
     text-shadow: 2px 2px 4px var(--cor3);
     transition-duration: 600ms;
     letter-spacing: 4px;
     text-transform: none;
-    z-index: 2;
+    margin: 1.6em;
+    margin-top: 3.5em;
     
 }
 
-.header > h2{
+.header > #home_description{
     letter-spacing: 4px;
     padding: 10px;
     font-family: "Rubik", sans-serif;
+    margin: 2em;
 }
 
-.header > h2 > .magic {
+.header > #home_description > .magic {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -123,28 +119,49 @@ body{
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
     letter-spacing: 1px;
+    
 }
 
 .social-media{
     margin-top: 1rem;
-    margin: 45px;
+    margin: 8em;
+    transition: all .5s ease-in-out;
 }
 
-.social-media a{
+.social-media:hover {
+    
+    transition: all .5s ease-in-out;
+}
+
+.social-media > .social_link{
     text-decoration: none;
     color: var(--cor0);
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
     border: 1px solid var(--cor0);
-    min-width: 4rem;
+    margin: 5px;
+    min-width: 3rem;
     align-items: center;
     justify-content: center;
-    transition: .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    
 }
-.social-media a:hover {
-    background-color: var(--cor0);
-    color: var(--cor4);
-    font-weight: bold;
+.social-media > .social_link:hover {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    
+    transform: scale(1.4);
 
+    transition: all 500ms ease-in-out;
 }
 
 
