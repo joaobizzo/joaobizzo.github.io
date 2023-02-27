@@ -12,7 +12,7 @@
     --grey2: #1B1B1B;
     --grey3: #242424;
 
-    --color_bgd: #0A0A0A;
+    --color_bgd: #0a0a0a;
     
     --fonte_titulo: "Rubik", sans-serif;
     --fonte_padrao: "Open Sans", sans-serif;
@@ -63,10 +63,11 @@
     transform: translateX(-25px);
 }
 
+
 body {
     background-color: var(--color_bgd);
     display: grid;
-    height: 100vh;
+    height: auto;
     width: auto;
     margin: 0px;
     overflow-x: hidden;
@@ -75,10 +76,18 @@ body {
 
     background-image: url(img/backgrond_site.jpg);
     background-repeat: no-repeat;
+
+    
+}
+
+.intro_box {
+    margin: 50px;
 }
 
 header {
     transform: translateY(0%);
+    height: 100vh;
+    
 }
 
 header h1, h2, h3 {
@@ -150,3 +159,80 @@ header h2 {
 
 
 /* PROJETOS */
+main {
+    background-color: var(--color_bgd);
+}
+.projetos {
+    background-color: var(--color_bgd);
+    min-height: 100vh;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 916px;
+    width: calc(100% - 20px);
+}
+
+#cards:hover > .card > .card-border{
+    opacity: 1;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+    cursor: pointer;
+    height: 250px;
+    position: relative;
+    width: 290px;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+
+.card::before,
+.card > .card-border {
+    
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: 2;
+}
+
+.card::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+.card > .card-border {
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.3),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+
+.card > .card-content {
+    background-color: var(--grey2);
+    border-radius: inherit;
+    height: calc(100% - 2px);
+    margin: 1px;
+    position: relative;
+    width: calc(100% - 2px);
+    z-index: 2;
+}
