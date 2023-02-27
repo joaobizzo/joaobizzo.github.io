@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
 :root {
     --purple: #7B1FA2;
     --violet: #673AB7;
@@ -15,7 +15,7 @@
     --color_bgd: #0A0A0A;
     
     --fonte_titulo: "Rubik", sans-serif;
-    --fonte_padrao: ;
+    --fonte_padrao: "Open Sans", sans-serif;
 }
 
 @keyframes background-pan {
@@ -44,6 +44,16 @@
     letter-spacing: 1px;
 }
 
+.glass {
+    padding: 20px;
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .quote > h2 {
     font-style: italic;
 }
@@ -62,10 +72,12 @@ body {
     overflow: hidden;
     place-items: center;
     cursor: default;
+
+    background-image: url(/img/backgrond_site.jpg);
 }
 
 header {
-    transform: translateY(-20%);
+    transform: translateY(0%);
 }
 
 header h1, h2, h3 {
@@ -84,6 +96,7 @@ header h1 {
 }
 
 header h2 {
+    font-family: var(--fonte_padrao);
     font-size: clamp(2em, 2vh, 4em);
     padding: 10px;
     text-align: center;
@@ -93,10 +106,41 @@ header h2 {
 .social_media {
     display: flex;
     justify-content:center;
+    align-items: center;
+    margin-top: 3em;
     gap: 8px;
+    
+    
 }
 
-.social_media > a{
+.social_media a{
+    font-family: var(--fonte_titulo);
+    text-decoration: none;
+    padding: 1rem 3rem;
+    min-width: 3rem;
+    border: 1px solid var(--princ_white);
+    font-size: 25px;
+    color: var(--princ_white);
 
-    border: 1px solid white;
+    transition: all 300ms ease-in-out;
+}
+
+.social_media a:hover {
+    transform: scale(1.3);
+    background-color: var(--princ_white);
+    color: var(--princ_violet);
+    text-shadow: 0 0 2px var(--princ_grey);
+    /*animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;*/
+    transition: all 500ms ease-in-out;
 }
