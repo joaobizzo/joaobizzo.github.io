@@ -66,9 +66,10 @@
 body {
     background-color: var(--color_bgd);
     display: grid;
-    width: 100wh;
+    height: 100vh;
+    width: auto;
     margin: 0px;
-    overflow: scroll;
+    overflow-x: hidden;
     place-items: center;
     cursor: default;
 
