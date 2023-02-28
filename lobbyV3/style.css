@@ -165,12 +165,17 @@ header h2 {
     min-height: 100vh;
 }
 
-.projetos h1 {
-    color: var(--princ_grey);
+.projetos h1, h2 {
+    color: var(--princ_white);
     font-size: 3.8em;
     text-align: center;
     font-family: var(--fonte_titulo);
     text-shadow: 0.1px 0.1px 2px var(--grey3);
+}
+.projetos > h2{
+    font-size: 2em;
+    color: var(--grey3);
+    transform: translateY(-50%);
 }
 
 #cards {
@@ -187,7 +192,7 @@ header h2 {
 #img {
     width: 100%;
     height: 100%;
-    border-radius: inherit;
+    border-radius: 10px;
     align-items: center;
     object-fit: cover;
     overflow: hidden;
@@ -208,6 +213,7 @@ header h2 {
     width: 320px;
     filter: blur(3px);
     transition: all 400ms ease-in-out;
+    transform-style: preserve-3d;
     
 }
 
@@ -220,6 +226,10 @@ header h2 {
     opacity: 1;
     
     
+}
+
+.card:active {
+    transform: rotateY(180deg);
 }
 
 .card::before,
@@ -263,10 +273,40 @@ header h2 {
     border-radius: inherit;
     height: calc(100% - 2px);
     margin: 1px;
-    position: relative;
+    position: absolute;
     width: calc(100% - 2px);
     z-index: 2;
 
-    
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
     
 }
+
+
+.front_side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: var(--pink);
+}
+.back_side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: var(--pink);
+    transform: rotateY(180deg);
+}
+
+.back_side h1, p {
+    text-align: center;
+    margin: 10px;
+}
+.back_side h1 {
+    color: var(--princ_grey);
+}
+.back_side p {
+    color: var(--princ_white);
+    font-size: 1.1em;
+}  
