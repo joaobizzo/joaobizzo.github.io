@@ -302,11 +302,13 @@ header h2 {
 .back_side h1, p {
     text-align: center;
     margin: 10px;
+    font-family: var(--fonte_padrao);
 }
 .back_side h1 {
     color: var(--princ_grey);
+    font-size: 3em;
 }
 .back_side p {
     color: var(--princ_white);
-    font-size: 1.1em;
+    font-size: 1em;
 }  
