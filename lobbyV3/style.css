@@ -341,10 +341,7 @@ footer {
     font-size: 1em;
     color: var(--grey1);
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-}
-.rodape {
-    display: flex;
-
+    justify-content: center;
 }
