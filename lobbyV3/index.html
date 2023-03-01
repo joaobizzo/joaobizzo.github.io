@@ -10,6 +10,28 @@
 </head>
 <body>
     <header>
+        <div class="background">
+            <svg class="blob-motion" id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g transform="translate(437.5169372610804 311.7346972007068)">
+                    <path id="blob1"
+                        d="M191.1 -189.3C240.8 -141.4 269.4 -70.7 265.4 -4C261.4 62.7 224.7 125.4 175.1 168.7C125.4 212.1 62.7 236 4.8 231.2C-53 226.4 -106.1 192.7 -152.9 149.4C-199.7 106.1 -240.4 53 -240.8 -0.5C-241.3 -54 -201.6 -108 -154.8 -155.8C-108 -203.6 -54 -245.3 8.4 -253.7C70.7 -262 141.4 -237.1 191.1 -189.3"
+                        fill="none" stroke="#FC3792" stroke-width="6"></path>
+                </g>
+                <g transform="translate(453.2523360338565 320.3596906505083)" style="visibility: hidden">
+                    <path id="blob2" d="M171.8 -168.3C221.4 -122.1 259.7 -61 258.5 -1.2C257.4 58.7 216.7 117.4 167 154.9C117.4 192.4 58.7 208.7 -0.7 209.4C-60.1 210.1 -120.2 195.2 -170.2 157.7C-220.2 120.2 -260.1 60.1 -264.6 -4.5C-269.1 -69.1 -238.1 -138.1 -188.1 -184.3C-138.1 -230.5 -69.1 -253.7 -4 -249.7C61 -245.7 122.1 -214.4 171.8 -168.3" fill="none" stroke="#FC3792" stroke-width="6"></path>
+                </g>
+            </svg>
+            <script>
+                const tween = KUTE.fromTo(
+                    '#blob1',
+                    { path: '#blob1' },
+                    { path: '#blob2' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                tween.start()
+            </script>
+        </div>
         <div class="intro_box glass">
             <h1 id="name">
                 <span class="magic">João Bizzo</span>
@@ -26,6 +48,7 @@
         <div class="arrow"> 
             ⬇
         </div>
+        
     </header>
     
     <main class="projetos">

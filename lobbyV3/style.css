@@ -66,6 +66,17 @@
 }
 
 
+/*blob animation*/
+.flip {
+    transform: rotate(180deg);
+}
+.blob-motion {
+    position: absolute;
+    z-index: -1;
+}
+
+
+
 body {
     background-color: var(--color_bgd);
     display: grid;
