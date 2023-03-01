@@ -16,6 +16,8 @@
     
     --fonte_titulo: "Rubik", sans-serif;
     --fonte_padrao: "Open Sans", sans-serif;
+
+    --font_size_titulo: 4em;
 }
 
 @keyframes background-pan {
@@ -98,7 +100,7 @@ header h1, h2, h3 {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: var(--font_size_titulo);
     text-align: center;
     margin-bottom: 1.3em;
     /*text-shadow: 0 0 2px var(--princ_white);*/
