@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
 :root {
-    --purple: #7B1FA2;
+    --purple: #7b1fa2 ;
     --violet: #673ab7;
     --pink: #F48FB1;
 
@@ -73,7 +73,6 @@
 .blob-motion {
     position: absolute;
     z-index: -1;
-    transform: translate(-30%, -10%);
 }
 
 
@@ -96,9 +95,15 @@ body {
 
 .intro_box {
     margin-top: 120px;
+    margin: 150px 425px 0 425px;
+    padding-bottom: 30px;
+    transform: translateY(-52em);
 
 }
 
+.background {
+    transform: translateY(-10%);
+}
 
 header {
     transform: translateY(5%);
@@ -118,7 +123,6 @@ header h1 {
     text-align: center;
     margin-top: 0.7em;
     margin-bottom: 0.7em;
-    text-shadow: 0 0 4px white;
 
 }
 
@@ -177,10 +181,11 @@ header h2 {
 
 /* SETA */
 .arrow {
-    color: rgba(255, 255, 255, 0.39);
+    color: rgba(140, 75, 206, 0.242);
     text-align: center;
     font-size: 5em;
     transform: translate(-10px, 2em);
+    transform: translateY(-8.2em);
 }
 
 
