@@ -73,6 +73,7 @@
 .blob-motion {
     position: absolute;
     z-index: -1;
+    transform: translate(-30%, -10%);
 }
 
 
@@ -87,7 +88,7 @@ body {
     place-items: center;
     cursor: default;
 
-    background-image: url(img/backgrond_site.jpg);
+    background-image: url(img/backgrond_site.jp);
     background-repeat: no-repeat;
 
     
@@ -97,6 +98,7 @@ body {
     margin-top: 120px;
 
 }
+
 
 header {
     transform: translateY(5%);
@@ -116,7 +118,7 @@ header h1 {
     text-align: center;
     margin-top: 0.7em;
     margin-bottom: 0.7em;
-
+    text-shadow: 0 0 4px white;
 
 }
 

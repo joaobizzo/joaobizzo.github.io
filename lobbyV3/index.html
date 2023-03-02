@@ -1,35 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+
 </head>
+
 <body>
     <header>
         <div class="background">
-            <svg class="blob-motion" id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+
+            <svg class="blob-motion" id="visual" viewBox="0 0 1600 800" width="1600" height="800" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                <g transform="translate(437.5169372610804 311.7346972007068)">
-                    <path id="blob1"
-                        d="M191.1 -189.3C240.8 -141.4 269.4 -70.7 265.4 -4C261.4 62.7 224.7 125.4 175.1 168.7C125.4 212.1 62.7 236 4.8 231.2C-53 226.4 -106.1 192.7 -152.9 149.4C-199.7 106.1 -240.4 53 -240.8 -0.5C-241.3 -54 -201.6 -108 -154.8 -155.8C-108 -203.6 -54 -245.3 8.4 -253.7C70.7 -262 141.4 -237.1 191.1 -189.3"
-                        fill="none" stroke="#FC3792" stroke-width="6"></path>
+                <rect x="0" y="0" width="1600" height="800" fill="#0a0a0a"></rect>
+                <g>
+                    <path id="background11"
+                        d="M0 598L267 527L533 540L800 359L1067 320L1333 452L1600 348L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#f48fb1"></path>
+                    <path id="background21"
+                        d="M0 495L267 347L533 357L800 462L1067 423L1333 402L1600 471L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#e67aaa"></path>
+                    <path id="background31"
+                        d="M0 439L267 236L533 265L800 424L1067 273L1333 449L1600 447L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#d765a6"></path>
+                    <path id="background41"
+                        d="M0 201L267 281L533 195L800 297L1067 280L1333 182L1600 380L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#c551a3"></path>
+                    <path id="background51"
+                        d="M0 150L267 164L533 236L800 167L1067 246L1333 157L1600 272L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#b03ea2"></path>
+                    <path id="background61"
+                        d="M0 110L267 96L533 154L800 105L1067 171L1333 133L1600 219L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#982da2"></path>
+                    <path id="background71"
+                        d="M0 127L267 129L533 114L800 47L1067 134L1333 55L1600 53L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#7b1fa2"></path>
                 </g>
-                <g transform="translate(453.2523360338565 320.3596906505083)" style="visibility: hidden">
-                    <path id="blob2" d="M171.8 -168.3C221.4 -122.1 259.7 -61 258.5 -1.2C257.4 58.7 216.7 117.4 167 154.9C117.4 192.4 58.7 208.7 -0.7 209.4C-60.1 210.1 -120.2 195.2 -170.2 157.7C-220.2 120.2 -260.1 60.1 -264.6 -4.5C-269.1 -69.1 -238.1 -138.1 -188.1 -184.3C-138.1 -230.5 -69.1 -253.7 -4 -249.7C61 -245.7 122.1 -214.4 171.8 -168.3" fill="none" stroke="#FC3792" stroke-width="6"></path>
+                <g style="visibility: hidden">
+                    <path id="background12"
+                        d="M0 603L267 557L533 327L800 448L1067 425L1333 507L1600 445L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#f48fb1"></path>
+                    <path id="background22"
+                        d="M0 482L267 489L533 524L800 506L1067 461L1333 470L1600 352L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#e67aaa"></path>
+                    <path id="background32"
+                        d="M0 318L267 334L533 350L800 377L1067 340L1333 374L1600 388L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#d765a6"></path>
+                    <path id="background42"
+                        d="M0 332L267 191L533 198L800 252L1067 242L1333 339L1600 368L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#c551a3"></path>
+                    <path id="background52"
+                        d="M0 161L267 173L533 238L800 182L1067 183L1333 213L1600 191L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#b03ea2"></path>
+                    <path id="background62"
+                        d="M0 161L267 160L533 199L800 140L1067 218L1333 195L1600 198L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#982da2"></path>
+                    <path id="background72"
+                        d="M0 129L267 112L533 45L800 117L1067 100L1333 45L1600 48L1600 0L1333 0L1067 0L800 0L533 0L267 0L0 0Z"
+                        fill="#7b1fa2"></path>
                 </g>
             </svg>
             <script>
-                const tween = KUTE.fromTo(
-                    '#blob1',
-                    { path: '#blob1' },
-                    { path: '#blob2' },
+
+                const tween1 = KUTE.fromTo(
+                    '#background11',
+                    { path: '#background11' },
+                    { path: '#background12' },
                     { repeat: 999, duration: 3000, yoyo: true }
                 )
-                tween.start()
+
+                const tween2 = KUTE.fromTo(
+                    '#background21',
+                    { path: '#background21' },
+                    { path: '#background22' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                const tween3 = KUTE.fromTo(
+                    '#background31',
+                    { path: '#background31' },
+                    { path: '#background32' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                const tween4 = KUTE.fromTo(
+                    '#background41',
+                    { path: '#background41' },
+                    { path: '#background42' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                const tween5 = KUTE.fromTo(
+                    '#background51',
+                    { path: '#background51' },
+                    { path: '#background52' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                const tween6 = KUTE.fromTo(
+                    '#background61',
+                    { path: '#background61' },
+                    { path: '#background62' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+                const tween7 = KUTE.fromTo(
+                    '#background71',
+                    { path: '#background71' },
+                    { path: '#background72' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+
+
+                tween1.start(), tween2.start(), tween3.start(), tween4.start(), tween5.start(), tween6.start(), tween7.start()
+
+
+
+
             </script>
         </div>
         <div class="intro_box glass">
@@ -45,12 +132,12 @@
                 <a href="#" target="_blank">Linkedin</a>
             </div>
         </div>
-        <div class="arrow"> 
+        <div class="arrow">
             ⬇
         </div>
-        
+
     </header>
-    
+
     <main class="projetos">
         <div id="titulo_projetos">
             <h1>Projetos</h1>
@@ -66,7 +153,9 @@
                     <div class="back_side">
                         <h1>Projeto 1</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
@@ -80,7 +169,9 @@
                     <div class="back_side">
                         <h1>Projeto 2</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
@@ -94,7 +185,9 @@
                     <div class="back_side">
                         <h1>Projeto 3</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
@@ -108,7 +201,9 @@
                     <div class="back_side">
                         <h1>Projeto 4</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
@@ -122,7 +217,9 @@
                     <div class="back_side">
                         <h1>Projeto 5</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
@@ -136,14 +233,16 @@
                     <div class="back_side">
                         <h1>Projeto 6</h1>
                         <p>
-                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias. Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui obcaecati impedit in, hic modi aliquam.
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <script src="/main.js"></script>
-        
+
     </main>
     <footer>
         <div id="rodape">
@@ -159,4 +258,5 @@
         </div>
     </footer>
 </body>
+
 </html>
