@@ -104,8 +104,7 @@ body {
 }
 
 .background {
-    transform: translateY(-80px);
-    transform: translateX(-50px);
+    transform: translateY(-60px);
 }
 
 header {
