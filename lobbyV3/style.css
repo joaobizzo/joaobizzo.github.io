@@ -9,7 +9,7 @@
     --princ_grey: #535353;
 
     --grey1: #100F10;
-    --grey2: #1B1B1B;
+    --grey2: #  ;
     --grey3: #242424;
 
     --color_bgd: #0a0a0a;
@@ -104,7 +104,8 @@ body {
 }
 
 .background {
-    transform: translateY(-10%);
+    transform: translateY(-80px);
+    transform: translateX(-50px);
 }
 
 header {
