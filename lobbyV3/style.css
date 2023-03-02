@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans&family=Rubik&display=swap');
 :root {
     --purple: #7b1fa2 ;
     --violet: #673ab7;
@@ -15,6 +15,7 @@
     --color_bgd: #0a0a0a;
     
     --fonte_titulo: "Rubik", sans-serif;
+    --fonte_chique: 'Montserrat', sans-serif;
     --fonte_padrao: "Open Sans", sans-serif;
 
     --font_size_titulo: 4em;
@@ -128,7 +129,7 @@ header h1 {
 }
 
 header h2 {
-    font-family: var(--fonte_padrao);
+    font-family: var(--fonte_chique);
     font-size: clamp(1.8em, 2vh, 4em);
     padding: 0px;
     text-align: center;
@@ -147,7 +148,7 @@ header h2 {
 }
 
 .social_media a{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte_chique);
     font-weight: 100;
     text-decoration: none;
     padding: 1rem 3rem;
@@ -157,14 +158,15 @@ header h2 {
     color: var(--princ_white);
 
     transition: all 300ms ease-in-out;
+    
 }
 
 .social_media a:hover {
     transform: scale(1.3);
-    font-weight: 300;
     background-color: rgba(255, 255, 255, 0.948);
     color: var(--princ_violet);
-    text-shadow: 0 0 2px var(--grey3);
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--grey3);
     /*animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -188,7 +190,7 @@ header h2 {
     text-align: center;
     font-size: 5em;
     transform: translate(-10px, 2em);
-    transform: translateY(-8.2em);
+    transform: translateY(-8.3em);
 }
 
 
