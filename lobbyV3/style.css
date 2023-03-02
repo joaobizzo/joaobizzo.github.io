@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
 :root {
     --purple: #7B1FA2;
-    --violet: rgb(103, 58, 183);
+    --violet: #673ab7;
     --pink: #F48FB1;
 
-    --princ_violet: rgb(143, 0, 255);
+    --princ_violet: #8f00ff;
     --princ_white: #FAFAFA;
     --princ_grey: #535353;
 
