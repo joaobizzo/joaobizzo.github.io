@@ -91,7 +91,7 @@
     z-index: -1;
 }
 
-#blob {
+/*#blob {
     background-color: white;
     height: 300px;
     aspect-ratio: 1;
@@ -107,11 +107,8 @@
         var(--purple)
     );
     animation: rotate 20s infinite;
-    filter: blur(200px);
-    z-index: 1;
-}
 
-
+}*/
 
 body {
     background-color: var(--color_bgd);
@@ -133,8 +130,8 @@ body {
     margin-top: 120px;
     margin: 150px 425px 0 425px;
     padding-bottom: 30px;
-    /*transform: translateY(-52em);*/
-    z-index: 2;
+    transform: translateY(-52em);
+    z-index: 1;
 
 }
 
