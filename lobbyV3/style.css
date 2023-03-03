@@ -30,6 +30,15 @@
         background-position: 200% center;
     }
 }
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+
+    }
+    to {
+        rotate: 360deg;
+    }
+}
 
 .magic {
     animation: background-pan 3s linear infinite;
@@ -84,6 +93,15 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to right,
+        aquamarine,
+        var(--purple)
+    );
+    animation: rotate 20s infinite;
 }
 
 
