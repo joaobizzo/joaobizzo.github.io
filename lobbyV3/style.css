@@ -35,6 +35,11 @@
         rotate: 0deg;
 
     }
+
+    50% {
+        scale: 1 1.5;
+    }
+
     to {
         rotate: 360deg;
     }
@@ -102,6 +107,8 @@
         var(--purple)
     );
     animation: rotate 20s infinite;
+    filter: blur(200px);
+    z-index: 1;
 }
 
 
@@ -127,6 +134,7 @@ body {
     margin: 150px 425px 0 425px;
     padding-bottom: 30px;
     /*transform: translateY(-52em);*/
+    z-index: 2;
 
 }
 
