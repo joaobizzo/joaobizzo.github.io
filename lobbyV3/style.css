@@ -77,6 +77,15 @@
     z-index: -1;
 }
 
+#blob {
+    background-color: white;
+    height: 300px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
 
 
 body {
@@ -99,7 +108,7 @@ body {
     margin-top: 120px;
     margin: 150px 425px 0 425px;
     padding-bottom: 30px;
-    transform: translateY(-52em);
+    /*transform: translateY(-52em);*/
 
 }
 
