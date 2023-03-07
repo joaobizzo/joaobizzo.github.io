@@ -46,6 +46,22 @@
     }
 }
 
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--grey3);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: linear-gradient(165deg, var(--pink), var(--violet));
+    opacity: 0.6;
+}
+
+
 .magic {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
@@ -103,6 +119,7 @@
     pointer-events: none;
     z-index: 99999999; /* so that it stays on top of all other elements */
     opacity: 0.6;
+    box-shadow: 0 0 8px rgba(238, 130, 238, 0.269);
   }
 
 
