@@ -37,7 +37,7 @@ circles.forEach(function (circle, index) {
 window.addEventListener("mousemove", function(e){
   coords.x = e.clientX;
   coords.y = e.clientY;
-  
+
 });
 
 function animateCircles() {
