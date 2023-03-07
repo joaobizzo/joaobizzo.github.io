@@ -285,6 +285,7 @@ header h2 {
     font-size: 1.6em;
     color: var(--princ_grey);
     transform: translateY(-50%);
+    margin: 15px;
     
 }
 
@@ -430,12 +431,14 @@ header h2 {
 
 footer {
     height: 5vh;
-    width: 100vw;
-    background-color: var(--grey3);
-    font-size: 1em;
-    color: var(--grey1);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    bottom: 0;
+    text-align: center;
+    transform: translateY(15px);
+    line-height: 40px;
+    font-family: var(--fonte_chique);
+    color: var(--princ_grey);
+    font-weight: bold;
+    opacity: 0.8;
 }
