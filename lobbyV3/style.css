@@ -49,17 +49,17 @@
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: var(--grey3);
+    border-radius: 30px;
+    background-color: var(--grey1);
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background: linear-gradient(165deg, var(--pink), var(--violet));
-    opacity: 0.6;
 }
+
 
 
 .magic {
