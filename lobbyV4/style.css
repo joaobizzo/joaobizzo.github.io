@@ -46,6 +46,29 @@
     }
 }
 
+@-webkit-keyframes move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+  
+  @keyframes move {
+    from {
+      transform: translate(-100px, -50px) rotate(-180deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(800px, 200px) rotate(40deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
 
 
 /* SCROLLBAR */
@@ -62,7 +85,24 @@
     background: linear-gradient(165deg, var(--pink), var(--violet));
 }
 
-
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(
+      to right,
+      var(--pink) 31.77%,
+      var(--violet) 86%,
+      var(--purple) 100%
+    );
+    mix-blend-mode: color-dodge;
+    -webkit-animation: move 25s infinite alternate;
+            animation: move 25s infinite alternate;
+    transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+    opacity: 0.8;
+    filter: blur(10px);
+  }
+  
 
 .magic {
     animation: background-pan 3s linear infinite;
@@ -165,7 +205,6 @@ body {
     margin-top: 120px;
     margin: 150px 425px 0 425px;
     padding-bottom: 30px;
-    transform: translateY(-52em);
     z-index: 1;
 
 }
@@ -177,11 +216,6 @@ body {
     visibility: visible;
     opacity: 1;
     justify-content: center;
-}
-
-
-.background {
-    transform: translateY(-60px);
 }
 
 header {
@@ -288,7 +322,7 @@ header h2 {
     color: var(--princ_white);
     font-size: 3.8em;
     text-align: center;
-    font-family: var(--fonte_titulo);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 0.1px 0.1px 2px var(--grey3);
 }
 .projetos h2{
@@ -340,10 +374,8 @@ header h2 {
     
 }
 
-.card:hover {
-    filter: none;
-    transition: all 400ms ease-in-out;
-}
+
+
 
 .card:hover::before{
     opacity: 1;
@@ -351,8 +383,7 @@ header h2 {
     
 }
 
-.card:active {
-    transform: rotateY(180deg);
+.card:active ~ {
     transition: all 0.5s ease-in-out;
 }
 
@@ -406,6 +437,25 @@ header h2 {
     
 }
 
+.card:hover {
+    filter: brightness(100%);
+    
+    transform: scale(1.6);
+    z-index: 99;
+    transition: all 400ms ease-in-out;
+}
+
+.card:hover .front_side {
+    filter: blur(3px);
+
+    transition: 0.5s all ease-in-out;
+}
+.card:hover .back_side {
+    visibility: visible;
+
+    transition: 0.5s all ease-in-out;
+}
+
 
 .front_side {
     position: absolute;
@@ -413,6 +463,8 @@ header h2 {
     height: 100%;
     backface-visibility: hidden;
     color: var(--pink);
+    transition: all 200ms ease-in-out;
+    z-index: 0;
 }
 .back_side {
     position: absolute;
@@ -420,7 +472,9 @@ header h2 {
     height: 100%;
     backface-visibility: hidden;
     color: var(--pink);
-    transform: rotateY(180deg);
+    visibility: hidden;
+    transition: 0.1s all ease-in-out;
+    
 }
 
 .back_side h1, p {
@@ -429,7 +483,7 @@ header h2 {
     font-family: var(--fonte_padrao);
 }
 .back_side h1 {
-    color: var(--princ_grey);
+    color: var(--princ_white);
     font-size: 3em;
 }
 .back_side p {
