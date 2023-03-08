@@ -8,7 +8,17 @@
     --cor_fonte: #2f2f2f;
 }
 
-
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background-color: var(--cor_tercearia);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--cor_destaque);
+}
 * {
     margin: 0;
     padding: 0;
