@@ -278,7 +278,7 @@ body.toggled > #tiles > .tile:hover {
 }
 
 .tile:hover:before {
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30); 
 }
 
 .tile:before {
