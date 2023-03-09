@@ -24,6 +24,9 @@
 
     --g1: rgb(78, 0, 234);
     --g2: rgb(236, 64, 181);
+
+    --g3: rgba(78, 0, 234, 0.9);
+    --g4: rgba(236, 64, 181, 0.9);
 }
 
 @keyframes background-pan {
@@ -85,7 +88,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 15px;
-    background-color: var(--princ_white);
+    background-color: var(--pink);
 }
 
 .blob {
@@ -203,9 +206,9 @@ body {
     animation: background-pan 10s linear infinite;
     background: linear-gradient(
         to right,
-        var(--g1),
-        var(--g2),
-        var(--g1)
+        var(--g3),
+        var(--g4),
+        var(--g3)
     );
     background-size: 200%;
     height: 100vh;
@@ -217,8 +220,9 @@ body {
 }
 
 .intro_box {
-    margin-top: 120px;
-    margin: 150px 425px 0 425px;
+    margin-top: 100px;
+    width: 800px;
+    height: 400px;
     padding-bottom: 30px;
     z-index: 1;
 
@@ -227,10 +231,12 @@ body {
 .img {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 25%;
+    border: 1px solid var(--grey1);
     visibility: visible;
     opacity: 1;
     justify-content: center;
+    text-align: center;
 }
 
 /* TILES */
