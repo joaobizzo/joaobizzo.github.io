@@ -13,7 +13,7 @@
     --grey2: #  ;
     --grey3: #242424;
 
-    --color_bgd: #0a0a0a;
+    --color_bgd: rgb(15, 15, 15);
     
     --fonte_titulo: "Rubik", sans-serif;
     --fonte_chique: 'Montserrat', sans-serif;
@@ -81,12 +81,11 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    border-radius: 30px;
     background-color: var(--grey1);
 }
 ::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: linear-gradient(165deg, var(--pink), var(--violet));
+    border-radius: 15px;
+    background-color: var(--grey3);
 }
 
 .blob {
@@ -201,7 +200,6 @@ body {
     padding: 0;
 
 
-
     animation: background-pan 10s linear infinite;
     background: linear-gradient(
         to right,
@@ -211,6 +209,7 @@ body {
     );
     background-size: 200%;
     height: 100vh;
+    
     
     margin: 0px;
 
@@ -236,6 +235,12 @@ body {
 
 /* TILES */
 
+.in_black {
+    font-size: 4em;
+    font-family: var(--fonte_titulo);
+    text-shadow: 0 0 4px whitesmoke;
+    opacity: 0.8;
+}
 
 
 body.toggled {
@@ -250,17 +255,6 @@ body.toggled > #icon {
   opacity: 1;
 }
 
-body.toggled > #tiles > .tile:hover {
-  opacity: 0.99 !important;
-}
-
-.centered {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 #tiles {
   height: calc(100vh - 1px);
   width: calc(100vw - 1px);
@@ -273,13 +267,11 @@ body.toggled > #tiles > .tile:hover {
 }
 
 .tile {
-  cursor: pointer;
+  cursor: none;
   position: relative;
 }
 
-.tile:hover:before {
-  background-color: rgb(30, 30, 30); 
-}
+
 
 .tile:before {
   background-color: rgb(15, 15, 15);
@@ -303,9 +295,21 @@ body.toggled > #tiles > .tile:hover {
   line-height: 0.9em;
 }
 
+.centered {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-
-
+#icon {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 80vmin;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1200ms ease;
+    z-index: 1;
+  }
 
 
 
@@ -315,6 +319,7 @@ body.toggled > #tiles > .tile:hover {
 header {
     transform: translateY(5%);
     height: 100vh;
+    
     
     
 }
@@ -412,6 +417,7 @@ header h2 {
 
 .projetos {
     background-color: var(--color_bgd);
+    padding: 0 280px 0px 280px;
     min-height: 95vh;
 }
 
@@ -607,5 +613,8 @@ footer {
     font-family: var(--fonte_chique);
     color: var(--princ_grey);
     font-weight: bold;
-    opacity: 0.8;
+    opacity: 1;
+    transform: translateY(-15px);
+    padding: 30px;
+    background-color: var(--color_bgd);
 }
