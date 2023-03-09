@@ -22,8 +22,8 @@
     --font_size_titulo: 4em;
 
 
-    --g1: rgb(78, 0, 234);
-    --g2: rgb(236, 64, 181);
+    --g1: #4e00ea;
+    --g2: #ec40b5;
 
     --g3: rgba(47, 0, 140, 0.9);
     --g4: rgba(149, 22, 109, 0.9);
@@ -228,6 +228,20 @@ body {
     
 }
 
+/* AREA ESCONDIDA */
+
+
+.escondido h1 {
+    font-size: 5em;
+    font-family: var(--fonte_titulo);
+    text-shadow: 0 0 4px whitesmoke;
+    opacity: 0.6;
+}
+
+
+
+
+
 .intro_box {
     margin-top: 100px;
     width: 600px;
@@ -253,12 +267,7 @@ body {
 
 /* TILES */
 
-.in_black {
-    font-size: 5em;
-    font-family: var(--fonte_titulo);
-    text-shadow: 0 0 4px whitesmoke;
-    opacity: 0.6;
-}
+
 
 
 body.toggled {
