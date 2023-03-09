@@ -22,8 +22,8 @@
     --font_size_titulo: 4em;
 
 
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
+    --g1: rgb(78, 0, 234);
+    --g2: rgb(236, 64, 181);
 }
 
 @keyframes background-pan {
@@ -85,7 +85,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 15px;
-    background-color: var(--grey3);
+    background-color: var(--princ_white);
 }
 
 .blob {
@@ -251,8 +251,13 @@ body.toggled > #title {
   opacity: 0;
 }
 
+
 body.toggled > header > #icon {
   opacity: 1;
+}
+
+body.toggled > header.social_media a {
+    z-index: 900;
 }
 
 #tiles {
@@ -353,6 +358,23 @@ header h2 {
     
 }
 
+
+
+
+
+
+/* SETA */
+.arrow {
+    color: rgba(140, 75, 206, 0.242);
+    text-align: center;
+    font-size: 5em;
+    transform: translate(-10px, 2em);
+    transform: translateY(-8.3em);
+}
+
+
+/* SOCIAL MEDIA*/
+
 .social_media {
     display: flex;
     justify-content:center;
@@ -361,6 +383,11 @@ header h2 {
     gap: 8px;
     
     
+}
+
+.media{
+    margin: 80px;
+
 }
 
 .social_media a{
@@ -380,7 +407,7 @@ header h2 {
 .social_media a:hover {
     transform: scale(1.3);
     background-color: rgba(255, 255, 255, 0.948);
-    color: var(--princ_violet);
+    color: var(--pink);
     font-weight: bold;
     
     /*animation: background-pan 3s linear infinite;
@@ -399,25 +426,17 @@ header h2 {
     }
 
 
-
-
-/* SETA */
-.arrow {
-    color: rgba(140, 75, 206, 0.242);
-    text-align: center;
-    font-size: 5em;
-    transform: translate(-10px, 2em);
-    transform: translateY(-8.3em);
-}
-
-
 /* PROJETOS */
 
 .projetos {
     background-color: var(--color_bgd);
     padding: 0 280px 0px 280px;
-    min-height: 95vh;
+    min-height: 125vh;
 }
+
+
+
+
 
 #titulo_projetos {
     transform: translateX(-25px);
