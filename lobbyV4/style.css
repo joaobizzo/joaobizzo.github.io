@@ -238,9 +238,12 @@ header h1 {
     margin-bottom: 0.7em;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 
+    transition: 0.3s all ease-in-out;
 }
 header h1:hover {
     text-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+
+    transition: 0.3s all ease-in-out;
 }
 
 header h2 {
