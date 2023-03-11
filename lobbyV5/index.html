@@ -34,70 +34,70 @@
 
     <script>
 
-            const wrapper = document.getElementById("tiles");
+        const wrapper = document.getElementById("tiles");
 
-            let columns = 0,
-                rows = 0,
-                toggled = false;
+        let columns = 0,
+            rows = 0,
+            toggled = false;
 
-            const toggle = () => {
-                toggled = !toggled;
-            
-            document.body.classList.toggle("toggled");
-            }
-
-            const handleOnClick = index => {
-                toggle();
-                
-                anime({
-                    targets: ".tile",
-                    opacity: toggled ? 0 : 1,
-                    delay: anime.stagger(50, {
-                    grid: [columns, rows],
-                    from: index
-                    })
-                });
+        const toggle = () => {
+            toggled = !toggled;
         
-                ;
+        document.body.classList.toggle("toggled");
+        }
 
-                
-            }
+        const handleOnClick = index => {
+            toggle();
+            
+            anime({
+                targets: ".tile",
+                opacity: toggled ? 0 : 1,
+                delay: anime.stagger(50, {
+                grid: [columns, rows],
+                from: index
+                })
+            });
+    
+            ;
 
-            const createTile = index => {
-                const tile = document.createElement("div");
             
-                tile.classList.add("tile");
-            
-                tile.style.opacity = toggled ? 0 : 1;
-            
-                tile.onclick = e => handleOnClick(index);
-            
-                return tile;
-            }
+        }
 
-            const createTiles = quantity => {
-                Array.from(Array(quantity)).map((tile, index) => {
-                    wrapper.appendChild(createTile(index));
-                });
-            }
+        const createTile = index => {
+            const tile = document.createElement("div");
+        
+            tile.classList.add("tile");
+        
+            tile.style.opacity = toggled ? 0 : 1;
+        
+            tile.onclick = e => handleOnClick(index);
+        
+            return tile;
+        }
 
-            const createGrid = () => {
-                wrapper.innerHTML = "";
-            
-                const size = document.body.clientWidth > 800 ? 100 : 50;
-            
-                columns = Math.floor(document.body.clientWidth / size);
-                rows = Math.floor(document.body.clientHeight / size);
-            
-                wrapper.style.setProperty("--columns", columns);
-                wrapper.style.setProperty("--rows", rows);
-            
-                createTiles(columns * rows);
-            }
+        const createTiles = quantity => {
+            Array.from(Array(quantity)).map((tile, index) => {
+                wrapper.appendChild(createTile(index));
+            });
+        }
 
-            createGrid();
+        const createGrid = () => {
+            wrapper.innerHTML = "";
+        
+            const size = document.body.clientWidth > 800 ? 100 : 50;
+        
+            columns = Math.floor(document.body.clientWidth / size);
+            rows = Math.floor(document.body.clientHeight / size);
+        
+            wrapper.style.setProperty("--columns", columns);
+            wrapper.style.setProperty("--rows", rows);
+        
+            createTiles(columns * rows);
+        }
 
-            window.onresize = () => createGrid();
+        createGrid();
+
+        window.onresize = () => createGrid();
     </script>
     <header>
         <canvas id="icon"></canvas>
@@ -294,7 +294,7 @@
             animateCircles();
         </script>
         
-        <script>
+        <!--script>
             console.clear()
             const canvas = document.querySelector('canvas')
             const ctx = canvas.getContext('2d')
@@ -423,7 +423,7 @@
             canvas.width = window.innerWidth
             canvas.height = window.innerHeight
             }
-        </script>
+        </script-->
     </main>
     <footer>
         <div id="rodape">

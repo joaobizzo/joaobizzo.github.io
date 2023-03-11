@@ -212,14 +212,14 @@ body {
     padding: 0;
 
 
-    /*animation: background-pan 9999s linear infinite;
+    animation: background-pan 9999s linear infinite;
     background: linear-gradient(
         to right,
         var(--g3),
         var(--g4),
         var(--g3)
     );
-    background-size: 200%;*/
+    background-size: 200%;
     height: 100vh;
     
     
