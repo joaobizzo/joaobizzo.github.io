@@ -28,9 +28,48 @@
     --g3: rgba(47, 0, 140, 0.9);
     --g4: rgba(149, 22, 109, 0.9);
 
+
+
+
 }
 
+/**/
 
+  
+  @keyframes anim-popoutin {
+    0% {
+      
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    25% {
+      color: rgb(237, 163, 255);
+      transform: scale(1.4);
+      opacity: 1;
+      text-shadow: 3px 4px 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      
+    }
+  }
+
+/**/
+
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 
 @keyframes background-pan {
     from {
@@ -91,7 +130,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 15px;
-    background-color: var(--pink);
+    background-color: var(--princ_white);
 }
 
 .blob {
@@ -128,6 +167,8 @@
     white-space: nowrap;
     letter-spacing: 1px;
 }
+
+
 
 .glass {
     padding: 20px;
@@ -212,14 +253,14 @@ body {
     padding: 0;
 
 
-    /*animation: background-pan 9999s linear infinite;
+    animation: background-pan 9999s linear infinite;
     background: linear-gradient(
         to right,
         var(--g3),
         var(--g4),
         var(--g3)
     );
-    background-size: 200%;*/
+    background-size: 150%;
     height: 100vh;
     
     
@@ -232,10 +273,11 @@ body {
 
 
 .escondido h1 {
-    font-size: 5em;
-    font-family: var(--fonte_titulo);
-    text-shadow: 0 0 4px whitesmoke;
-    opacity: 0.6;
+    color: var(--princ_white);
+    font-size: 4em;
+    font-family: var(--fonte_chique);
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+    opacity: 0.8;
 }
 
 
@@ -371,7 +413,7 @@ header h1 {
     margin-top: 0.7em;
     margin-bottom: 0.7em;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-
+    animation: 5s anim-popoutin ease infinite;
     transition: 0.3s all ease-in-out;
 }
 header h1:hover {
