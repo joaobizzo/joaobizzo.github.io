@@ -212,14 +212,14 @@ body {
     padding: 0;
 
 
-    animation: background-pan 9999s linear infinite;
+    /*animation: background-pan 9999s linear infinite;
     background: linear-gradient(
         to right,
         var(--g3),
         var(--g4),
         var(--g3)
     );
-    background-size: 200%;
+    background-size: 200%;*/
     height: 100vh;
     
     
@@ -276,6 +276,7 @@ body.toggled {
 
 body.toggled > #title {
   opacity: 0;
+  
 }
 
 
@@ -286,6 +287,8 @@ body.toggled > header > #icon {
 body.toggled > header.social_media a {
     z-index: 900;
 }
+
+
 
 #tiles {
   height: calc(100vh - 1px);
@@ -301,6 +304,7 @@ body.toggled > header.social_media a {
 .tile {
   cursor: none;
   position: relative;
+  border: 0.01px solid rgba(128, 0, 128, 0.372)
 }
 
 
