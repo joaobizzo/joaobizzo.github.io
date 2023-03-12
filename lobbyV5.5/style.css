@@ -868,6 +868,8 @@ footer {
     
     padding: 30px;
     background-color: var(--color_bgd);
+
+    z-index: 2;
 }
 
 
