@@ -508,7 +508,7 @@ header h2 {
 
 
 /* PARTE PRINCIPAL - CONTEUDO */
-main {
+.main_page {
     background-color: var(--color_bgd);
     padding: 0 280px 0px 280px;
     min-height: 160vh;
@@ -542,7 +542,7 @@ main {
 /* SOBRE MIM */
 
 .about {
-    margin: 0;
+    margin: 10px;
 }
 .about h1 {
     margin-top: 80px;
