@@ -738,6 +738,7 @@ main {
 
 .card:hover::before{
     opacity: 1;
+    z-index: 10;
     
     
 }
@@ -854,32 +855,16 @@ main {
 
 }  
 
-
-footer {
-    height: 5vh;
-    width: 100%;
-    
-    bottom: 0;
-    text-align: center;
-    
-    line-height: 40px;
-    font-family: var(--fonte_chique);
-    color: var(--princ_grey);
-    
-    opacity: 1;
-    
-    padding: 30px;
-    background-color: var(--color_bgd);
-
-    z-index: 2;
+#rodape {
+    transform: translateY(50px);
 }
 
-
 #rodape h1{
+    font-family: var(--fonte_chique);
+    color: var(--princ_grey);
     font-weight: bold;
     font-size: 14px;
     width: auto;
-
     transition: 500ms all ease-in-out;
 }
 
