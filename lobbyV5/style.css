@@ -61,6 +61,24 @@
     }
   }
 
+
+
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -4rem;    
+    }
+    50%{
+      top: -8rem;
+    }
+    72.5%{
+      top: -12.25rem;
+    }
+  }
+
+
 /**/
 
 @keyframes shine{
@@ -430,7 +448,7 @@ header h1 {
     margin-top: 0.7em;
     margin-bottom: 0.7em;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-    animation: 5s anim-popoutin ease infinite;
+    /*animation: 5s anim-popoutin ease infinite;*/
     transition: 0.3s all ease-in-out;
 }
 header h1:hover {
@@ -444,11 +462,39 @@ header h2 {
     font-size: clamp(1.8em, 2vh, 4em);
     padding: 0px;
     text-align: center;
-    font-style: italic;
     
 }
 
 
+.roller{
+    height: 4.125rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #1D3557;
+  }
+  
+  
+#spare-time{
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 4px;
+    margin-top: 0;
+    color: var(--princ_white);
+    text-shadow: 1px 1px 5px whitesmoke;
+
+}
+  
+.roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;  
+}
 
 
 
@@ -522,6 +568,7 @@ header h2 {
     background-color: var(--color_bgd);
     padding: 0 280px 0px 280px;
     min-height: 125vh;
+    padding-bottom: 80px;
 }
 
 
@@ -530,6 +577,7 @@ header h2 {
 
 #titulo_projetos {
     transform: translateX(-25px);
+    
 }
 
 
@@ -712,16 +760,34 @@ header h2 {
 footer {
     height: 5vh;
     width: 100%;
-    font-size: 14px;
+    
     bottom: 0;
     text-align: center;
-    transform: translateY(15px);
+    
     line-height: 40px;
     font-family: var(--fonte_chique);
     color: var(--princ_grey);
-    font-weight: bold;
+    
     opacity: 1;
-    transform: translateY(-15px);
+    
     padding: 30px;
     background-color: var(--color_bgd);
+}
+
+
+#rodape h1{
+    font-weight: bold;
+    font-size: 14px;
+    width: auto;
+
+    transition: 500ms all ease-in-out;
+}
+
+
+#rodape h1:hover {
+    transform: scale(2);
+    color: var(--g2);
+    text-shadow: 1px 1px 5px var(--g4);
+
+    transition: 500ms all ease-in-out;
 }
