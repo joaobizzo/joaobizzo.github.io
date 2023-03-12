@@ -260,11 +260,7 @@
 
 }*/
 
-canvas {
-    position: absolute;
-    transform: translate(-30%, -5%);
-    z-index: 0;
-}
+
 
 body {
     background-color: var(--color_bgd);
@@ -428,7 +424,7 @@ body.toggled > header.social_media a {
 
 
 header {
-    transform: translateY(5%);
+    transform: translateY(-15%);
     height: 100vh;
     
     
@@ -509,6 +505,53 @@ header h2 {
 }
 
 
+
+
+/* PARTE PRINCIPAL - CONTEUDO */
+.main_page {
+    background-color: var(--color_bgd);
+    padding: 0 280px 0px 280px;
+    min-height: 160vh;
+    padding-bottom: 80px;
+}
+
+
+
+#titulo_main_page {
+    transform: translateX(-25px);
+    
+}
+
+
+.main_page h1, .main_page h2 {
+    color: var(--princ_white);
+    font-size: 3.8em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0.1px 0.1px 2px var(--grey3);
+}
+.main_page h2{
+    font-family: var(--fonte_chique);
+    font-size: 1.6em;
+    color: var(--princ_grey);
+    transform: translateY(-50%);
+    margin: 15px;
+    
+}
+
+/* SOBRE MIM */
+
+.about {
+    margin: 0;
+}
+.about h1 {
+    margin-top: 80px;
+}
+.about > p {
+    color: var(--princ_white);
+    font-size: 1.5em;
+}
+
 /* SOCIAL MEDIA*/
 
 .social_media {
@@ -565,38 +608,7 @@ header h2 {
 
 /* PROJETOS */
 
-.projetos {
-    background-color: var(--color_bgd);
-    padding: 0 280px 0px 280px;
-    min-height: 125vh;
-    padding-bottom: 80px;
-}
 
-
-
-
-
-#titulo_projetos {
-    transform: translateX(-25px);
-    
-}
-
-
-.projetos h1, .projetos h2 {
-    color: var(--princ_white);
-    font-size: 3.8em;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 0.1px 0.1px 2px var(--grey3);
-}
-.projetos h2{
-    font-family: var(--fonte_chique);
-    font-size: 1.6em;
-    color: var(--princ_grey);
-    transform: translateY(-50%);
-    margin: 15px;
-    
-}
 
 #cards {
     display: flex;
