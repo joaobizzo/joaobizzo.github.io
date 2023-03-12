@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans&family=Rubik&display=swap');
+@import "compass/css3";
 :root {
     --purple: #7b1fa2 ;
     --violet: #673ab7;
-    --pink: #F48FB1;
+    --pink: #f48fb1;
 
     
-    --princ_violet: #8f00ff;
+    --princ_violet: rgb(143, 0, 255);
     --princ_white: #FAFAFA;
     --princ_grey: #535353;
 
@@ -29,7 +30,11 @@
     --g4: #80135d;
 
 
-
+    --nodeStreak: #80135d;
+    --computationalFogTop: #29007a;
+    --computationalFogBot: #29007a;
+    --visualDistortionZapper: 360px;
+    --nanoVelocity: 2s;
 
 }
 
@@ -282,6 +287,9 @@ body {
         var(--g3)
     );
     background-size: 150%;
+
+    /*background: linear-gradient(var(--computationalFogTop) 25%, var(--nodeStreak) 50%, var(--nodeStreak) 50%, var(--computationalFogBot) 100%);*/
+
     height: 100vh;
     
     
