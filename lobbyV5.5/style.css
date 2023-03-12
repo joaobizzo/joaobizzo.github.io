@@ -11,10 +11,10 @@
     --princ_grey: #535353;
 
     --grey1: #100F10;
-    --grey2: #  ;
+    --grey2: #1d1d1d ;
     --grey3: #242424;
 
-    --color_bgd: rgb(15, 15, 15);
+    --color_bgd: #0f0f0f;
     
     --fonte_titulo: "Rubik", sans-serif;
     --fonte_chique: 'Montserrat', sans-serif;
@@ -612,7 +612,7 @@ main {
 
 /* DARK MODE */
 .main_page {
-    background-color: var(--color_bgd);
+    background-color: #0f0f0ff3;
     
 }
 .main_page h1, .main_page h2 {
