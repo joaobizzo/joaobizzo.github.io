@@ -711,7 +711,7 @@ main {
     align-items: center;
     object-fit: cover;
     overflow: hidden;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #cards:hover > .card > .card-border{
@@ -838,18 +838,20 @@ main {
 
 .back_side h1, p {
     text-align: center;
-    margin: 10px;
+    margin: 6px;
     font-family: var(--fonte_padrao);
 }
 .back_side h1 {
     color: var(--princ_white);
-    font-size: 3em;
+    font-size: 3.4em;
 }
 .back_side p {
     color: var(--princ_white);
     font-size: 0.9em;
-    padding: 15px;
+    padding: 10px;
     text-align: justify;
+
+
 }  
 
 
