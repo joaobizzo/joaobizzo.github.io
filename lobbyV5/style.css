@@ -515,14 +515,15 @@ header h2 {
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 3em; margin-bottom: 3em;
     gap: 8px;
+
     
     
 }
 
 .media{
-    margin: 80px;
+    margin: 110px;
 
 }
 
