@@ -25,8 +25,8 @@
     --g1: #4e00ea;
     --g2: #ec40b5;
 
-    --g3: rgba(47, 0, 140, 0.9);
-    --g4: rgba(149, 22, 109, 0.9);
+    --g3: #29007a;
+    --g4: #80135d;
 
 
 
@@ -63,7 +63,14 @@
 
 /**/
 
-
+@keyframes shine{
+    0%{
+      background-position: 10px}
+    60%{
+      background-position: 180px}
+    100%{
+      background-position: 320px}
+  }
 
 @keyframes textclip {
   to {
@@ -271,12 +278,23 @@ body {
 
 /* AREA ESCONDIDA */
 
+.btn_shine{
+  
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 30%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  white-space: nowrap;
+  font-family: var(--fonte_chique);
+  font-size: 2em;
+}
+
 
 .escondido h1 {
     color: var(--princ_white);
-    font-size: 4em;
-    font-family: var(--fonte_chique);
-    text-shadow: 0 0 4px rgb(255, 255, 255);
     opacity: 0.8;
 }
 
@@ -346,7 +364,6 @@ body.toggled > header.social_media a {
 .tile {
   cursor: none;
   position: relative;
-  border: 0.01px solid rgba(128, 0, 128, 0.372)
 }
 
 
@@ -354,7 +371,7 @@ body.toggled > header.social_media a {
 .tile:before {
   background-color: rgb(15, 15, 15);
   content: "";
-  inset: 0.5px;
+  inset: 0px;
   position: absolute;
 }
 
