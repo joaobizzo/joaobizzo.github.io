@@ -508,7 +508,7 @@ header h2 {
 
 
 /* PARTE PRINCIPAL - CONTEUDO */
-.main_page {
+main {
     background-color: var(--color_bgd);
     padding: 0 280px 0px 280px;
     min-height: 160vh;
