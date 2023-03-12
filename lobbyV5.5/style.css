@@ -387,6 +387,7 @@ body {
 .escondido h1 {
     color: var(--princ_white);
     opacity: 0.8;
+    z-index: 1;
 }
 
 
@@ -435,9 +436,6 @@ body.toggled > header > #icon {
   opacity: 1;
 }
 
-body.toggled > header.social_media a {
-    z-index: 900;
-}
 
 
 
@@ -455,6 +453,7 @@ body.toggled > header.social_media a {
 .tile {
   cursor: none;
   position: relative;
+  z-index: 2;
 }
 
 
@@ -464,6 +463,7 @@ body.toggled > header.social_media a {
   content: "";
   inset: 0px;
   position: absolute;
+  z-index: 2;
 }
 
 #title {
