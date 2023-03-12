@@ -885,9 +885,8 @@ footer {
 
 
 #rodape h1:hover {
-    transform: scale(2);
+    transform: scale(1.6) rotateX(-360deg);
     color: var(--g2);
     text-shadow: 1px 1px 5px var(--g4);
-
     transition: 500ms all ease-in-out;
 }
