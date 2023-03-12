@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joao Bizzo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    <div class="wrap">
+        <div class="top-plane"></div>
+        <div class="bottom-plane"></div>
+    </div>
+
+    <div id="tiles"></div>
+
+    <h1 id="title" class="escondido centered btn_shine">clique e me conheça</h1>
+    
+
+    <script>
+
+        const wrapper = document.getElementById("tiles");
+
+        let columns = 0,
+            rows = 0,
+            toggled = false;
+
+        const toggle = () => {
+            toggled = !toggled;
+        
+        document.body.classList.toggle("toggled");
+        }
+
+        const handleOnClick = index => {
+            toggle();
+            
+            anime({
+                targets: ".tile",
+                opacity: toggled ? 0 : 1,
+                delay: anime.stagger(50, {
+                grid: [columns, rows],
+                from: index
+                })
+            });
+    
+            ;
+
+            
+        }
+
+        const createTile = index => {
+            const tile = document.createElement("div");
+        
+            tile.classList.add("tile");
+        
+            tile.style.opacity = toggled ? 0 : 1;
+        
+            tile.onclick = e => handleOnClick(index);
+        
+            return tile;
+        }
+
+        const createTiles = quantity => {
+            Array.from(Array(quantity)).map((tile, index) => {
+                wrapper.appendChild(createTile(index));
+            });
+        }
+
+        const createGrid = () => {
+            wrapper.innerHTML = "";
+        
+            const size = document.body.clientWidth > 800 ? 100 : 50;
+        
+            columns = Math.floor(document.body.clientWidth / size);
+            rows = Math.floor(document.body.clientHeight / size);
+        
+            wrapper.style.setProperty("--columns", columns);
+            wrapper.style.setProperty("--rows", rows);
+        
+            createTiles(columns * rows);
+        }
+
+        createGrid();
+
+        window.onresize = () => createGrid();
+    </script>
+    <header>
+        
+        <canvas id="icon"></canvas>
+        <div id="icon" class="intro_box glass">
+            <h1 id="name">
+                <span class="name_title">João Bizzo</span>
+            </h1>
+            <!--img class="img" src="/img/foto_eu_quadrado.jpg" alt="foto"-->
+            <div class="roller">
+                <h2 id="rolltext">
+                    full-stack dev <br>
+                    data scientist <br>
+                    IA/ML developer <br>
+                    <span id="spare-time">and whatever you need</span>
+                </h2>
+            </div>
+            
+        </div>
+        
+    </header>
+    <main class="main_page">
+        <div class="button"> <button></button> </div>
+        <div class="about">
+            <h1>Sobre mim</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex esse dolore repellendus velit accusantium odio tenetur doloribus in, quia fugit, quibusdam officia temporibus explicabo veritatis quae expedita repellat quos perferendis?</p>
+        </div>
+        <div class="media">
+            <h1>Social Media</h1>
+            <div class="social_media">
+            
+                <a href="https://github.com/joaobizzo" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Currículo</a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-bizzo-97a550201/" target="_blank">Linkedin</a>
+            </div>
+        </div>
+        <div id="titulo_main_page">
+            <h1>Projetos</h1>
+            <h2>clique para mais informações</h2>
+        </div>
+        <div id="cards">
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 1</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 2</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 3</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 4</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 5</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="front_side">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.olhardigital.com.br%2Fuploads%2Facervo_imagens%2F2019%2F03%2Fr16x9%2F20190322051919_1200_675_-_codigo_de_programacao.jpg&f=1&nofb=1&ipt=eba9d1293b34fb9c3947ed17b961be7102710afb4d63a3d185c3e4b481bfc776&ipo=images" alt="foto">
+                    </div>
+                    <div class="back_side">
+                        <h1>Projeto 6</h1>
+                        <p>
+                            Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                            Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                            obcaecati impedit in, hic modi aliquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            document.getElementById("cards").onmousemove = e => {
+                for(const card of document.getElementsByClassName("card")) {
+                    const rect = card.getBoundingClientRect(),
+                        x = e.clientX - rect.left,
+                        y = e.clientY - rect.top;
+            
+                    card.style.setProperty("--mouse-x", `${x}px`),
+                    card.style.setProperty("--mouse-y", `${y}px`);
+            
+                }
+            }
+            
+            const coords = { x: 0, y: 0 };
+            const circles = document.querySelectorAll(".circle");
+            
+            const colors = [
+                "#673ab7",
+                "#6d3bb7",
+                "#7c3db5",
+                "#9042b4",
+                "#a549b2",
+                "#b953af",
+                "#cb60ae",
+                "#da6dae",
+                "#e57aae",
+                "#ed85af",
+                "#f28cb0",
+                "#f48fb1"
+            ];
+            
+            circles.forEach(function (circle, index) {
+              circle.x = 0;
+              circle.y = 0;
+              circle.style.backgroundColor = colors[index % colors.length];
+            });
+            
+            window.addEventListener("mousemove", function(e){
+              coords.x = e.clientX;
+              coords.y = e.clientY;
+            
+            });
+            
+            function animateCircles() {
+            
+              let x = coords.x;
+              let y = coords.y;
+            
+              circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+            
+                circle.style.scale = (circles.length - index) / circles.length;
+            
+                circle.x = x;
+                circle.y = y;
+            
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+              });
+            
+              requestAnimationFrame(animateCircles);
+            }
+            
+            animateCircles();
+        </script>
+        
+        <!--script>
+            console.clear()
+            const canvas = document.querySelector('canvas')
+            const ctx = canvas.getContext('2d')
+
+            resizeCanvas()
+
+            let pipes = []
+
+            class Pipe {
+            constructor(x, y, size, xVel, yVel, clr) {
+                this.x = x
+                this.y = y
+                this.size = size
+                this.color = clr
+                this.xVel = xVel
+                this.xPrev = xVel
+                this.yVel = yVel
+                this.yPrev = yVel
+                this.minDist = this.updateMinDist()
+                this.dist = 0
+                this.hasEnteredScreen = false
+            }
+            update() {
+                this.x += this.xVel
+                this.y += this.yVel
+                this.dist++
+                
+                if (!this.hasEnteredScreen) {
+                if (this.x > 0 && this.x < canvas.width && this.y > 0 && this.y < canvas.height) {
+                    this.hasEnteredScreen = true
+                }
+                }
+                
+                if (this.dist % this.minDist === 0) {
+                if (Math.random() > 0.75) {
+                    this.changeDirections()
+                    this.minDist = this.updateMinDist()
+                }
+                }
+            }
+            draw() {
+                const scale = 8
+                const gradient = ctx.createRadialGradient(this.x, this.y, 2, this.x, this.y, this.size * scale);
+
+                // Add three color stops
+                gradient.addColorStop(0, "rgba(78, 0, 234, 0.01)");
+                gradient.addColorStop(1, "rgba(236, 64, 181, 0.02)");
+
+                // Set the fill style and draw a rectangle
+                ctx.fillStyle = gradient;
+                ctx.fillRect(this.x - this.size * (scale / 2), this.y - this.size * (scale / 2), this.size * scale, this.size * scale);
+                
+                ctx.beginPath()
+                ctx.fillStyle = this.color
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+                ctx.fill()
+                ctx.closePath()
+            }
+            updateMinDist() {
+                return Math.floor(Math.random() * 100 + 50)
+            }
+            changeDirections() {
+                const prevX = this.xVel
+                const prevY = this.yVel
+                this.xVel = Math.random() > 0.5 ? this.yPrev : this.yPrev * -1
+                this.yVel = Math.random() > 0.5 ? this.xPrev : this.xPrev * -1
+                this.xPrev = this.xVel
+                this.yPrev = this.yVel
+            }
+            }
+
+            function init(quantity, clr, scale = 1) {
+            for (let i = 0; i < quantity; i++) {
+                const speed = Math.random() * 0.4 + 0.25 
+                let x, y, xVel, yVel
+                // const size = Math.random() * 3 + 1
+                const size = (Math.random() + 0.5 - 0.5) * scale
+                if (Math.random() >= 0.5) {
+                x = Math.random() > 0.5 ? size * -1 : canvas.width + size
+                y = Math.random() * canvas.height
+                xVel = x < 0 ? speed : speed * -1
+                yVel = 0
+                } else {
+                x = Math.random() * canvas.width
+                y = Math.random() > 0.5 ? size * -1 : canvas.height + size
+                xVel = 0
+                yVel = y < 0 ? speed : speed * -1
+                }
+                pipes.push(new Pipe(x, y, size, xVel, yVel, clr))
+            }
+            }
+            init(16, '#9f55ca')
+            // init(16, '#fff')
+            setTimeout(() => {
+            init(16, '#c07ee6', 1.5)
+            // init(10, '#fff', 1.1)
+            }, 1500) 
+            setTimeout(() => {
+            init(8, '#e4c6f5', 2)
+            // init(6, '#fff', 1.25)
+            }, 3000) 
+
+            function animate() {
+            
+            for (let i = 0; i < pipes.length; i++) {
+                pipes[i].update()
+                pipes[i].draw()
+                
+                if (pipes[i].hasEnteredScreen) {
+                if (pipes[i].x < 0 || pipes[i].x > canvas.width || pipes[i].y < 0 || pipes[i].y > canvas.height) {
+                    pipes.splice(i, 1)
+                    i--
+                }
+                }
+            }
+            
+            console.log(pipes.length)
+            
+            requestAnimationFrame(animate)
+            }
+            animate()
+
+            window.addEventListener('resize', resizeCanvas)
+
+            function resizeCanvas() {
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+            }
+        </script-->
+    </main>
+    <footer>
+        <div id="rodape">
+            <h1>desenvolvido por João Bizzo</h1>
+        </div>
+    </footer>
+</body>
+
+</html>
