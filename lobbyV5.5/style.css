@@ -689,6 +689,13 @@ main {
     }
 
 
+#pdf {
+  position: absolute;
+  font-size: 0.3em;
+  text-align: center;
+  transform: translate(-80px, 30px);
+}
+
 /* PROJETOS */
 
 
