@@ -36,9 +36,6 @@ css
     transform-style: preserve-3d;
     transition: all 400ms ease-in-out;
     border-radius: 10px;
-   
-    
-    
 }
 
 .card:active {
