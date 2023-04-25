@@ -586,7 +586,8 @@ header h2 {
 /* PAGINA PRINCIPAL*/
 main {
     padding: 0 280px 0px 280px;
-    height: 200vh + 20px;
+    height: 100vh;
+    transform: translateY(-10vh);
     padding-bottom: 80px;
     z-index: 2;
 }
