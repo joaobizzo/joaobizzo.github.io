@@ -586,12 +586,12 @@ header h2 {
 /* PAGINA PRINCIPAL*/
 main {
     padding: 0 280px 0px 280px;
-    height: 100%;
+    height: 200vh + 20px;
     padding-bottom: 80px;
     z-index: 2;
 }
 
-#titulo_main_page {
+#titulo_projetos {
     transform: translateX(-25px);
     
 }
