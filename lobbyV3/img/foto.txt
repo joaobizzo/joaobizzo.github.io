@@ -1,0 +1,6 @@
+p1 password - <img id="img" src="https://live.staticflickr.com/65535/53540995367_e0d0288be0_h.jpg" alt="p1_password_generator"/>
+p2 plate - <img id="img" src="https://live.staticflickr.com/65535/53542197939_f162e05be4_h.jpg" alt="p2_license_plate"/>
+p3 face - <img id="img" src="https://live.staticflickr.com/65535/53542302325_0ff5193ae2_h.jpg" alt="p3_face_recognition"/>
+p4 site - <img id="img" src="https://live.staticflickr.com/65535/53541872946_b1d247c1ce_h.jpg" alt="p4_website"/>
+p5 server - <img id="img" src="https://live.staticflickr.com/65535/53540995357_473da6b3be_h.jpg" alt="p5_home_server"/>
+p6 construction - <img id="img" src="https://live.staticflickr.com/65535/53540995352_f8c78c2763_h.jpg" alt="p_under_construction">
