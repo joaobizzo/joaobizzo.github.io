@@ -186,7 +186,7 @@ body {
 
 header {
     transform: translateY(5%);
-    height: 100vh;
+    height: 85vh;
     
 }
 
@@ -318,7 +318,7 @@ header h2 {
     align-items: center;
     object-fit: cover;
     overflow: hidden;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #cards:hover > .card > .card-border{
@@ -334,25 +334,23 @@ header h2 {
     height: 250px;
     position: relative;
     width: 320px;
-    filter: brightness(30%);
+    filter: brightness(70%);
     transition: all 400ms ease-in-out;
     transform-style: preserve-3d;
     
 }
 
-.card:hover {
-    filter: none;
-    transition: all 400ms ease-in-out;
-}
+
+
 
 .card:hover::before{
     opacity: 1;
+    z-index: 10;
     
     
 }
 
-.card:active {
-    transform: rotateY(180deg);
+.card:active ~ {
     transition: all 0.5s ease-in-out;
 }
 
@@ -406,6 +404,25 @@ header h2 {
     
 }
 
+.card:hover {
+    filter: brightness(100%);
+    
+    transform: scale(1.5);
+    z-index: 99;
+    transition: all 400ms ease-in-out;
+}
+
+.card:hover .front_side {
+    filter: blur(2px);
+
+    transition: 0.5s all ease-in-out;
+}
+.card:hover .back_side {
+    visibility: visible;
+
+    transition: 0.5s all ease-in-out;
+}
+
 
 .front_side {
     position: absolute;
@@ -413,6 +430,8 @@ header h2 {
     height: 100%;
     backface-visibility: hidden;
     color: var(--pink);
+    transition: all 200ms ease-in-out;
+    z-index: 0;
 }
 .back_side {
     position: absolute;
@@ -420,24 +439,28 @@ header h2 {
     height: 100%;
     backface-visibility: hidden;
     color: var(--pink);
-    transform: rotateY(180deg);
+    visibility: hidden;
+    transition: 0.1s all ease-in-out;
+    
 }
 
 .back_side h1, p {
     text-align: center;
-    margin: 10px;
+    margin: 6px;
     font-family: var(--fonte_padrao);
 }
 .back_side h1 {
-    color: var(--princ_grey);
-    font-size: 3em;
+    color: var(--princ_white);
+    font-size: 2em;
 }
 .back_side p {
     color: var(--princ_white);
     font-size: 0.9em;
-    padding: 15px;
+    padding: 10px;
     text-align: justify;
-}  
+
+
+}
 
 
 footer {
