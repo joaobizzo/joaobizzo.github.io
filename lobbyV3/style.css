@@ -414,7 +414,7 @@ header h2 {
 
 .card:hover .front_side {
     filter: blur(2px);
-
+    filter: brightness(25%);
     transition: 0.5s all ease-in-out;
 }
 .card:hover .back_side {
