@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joao Bizzo</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    <header>
+        
+        <div class="background">
+            <svg class="blob-motio" id="visual" viewBox="0 0 1600 800" width="1600" height="800" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <rect x="0" y="0" width="1600" height="800" fill="#0a0a0a"></rect>
+                <g>
+                    <path id="background1"
+                        d="M0 446L33.3 439.5C66.7 433 133.3 420 200 394.8C266.7 369.7 333.3 332.3 400 353.2C466.7 374 533.3 453 600 474.7C666.7 496.3 733.3 460.7 800 444.2C866.7 427.7 933.3 430.3 1000 405.8C1066.7 381.3 1133.3 329.7 1200 343.5C1266.7 357.3 1333.3 436.7 1400 450.3C1466.7 464 1533.3 412 1566.7 386L1600 360L1600 0L1566.7 0C1533.3 0 1466.7 0 1400 0C1333.3 0 1266.7 0 1200 0C1133.3 0 1066.7 0 1000 0C933.3 0 866.7 0 800 0C733.3 0 666.7 0 600 0C533.3 0 466.7 0 400 0C333.3 0 266.7 0 200 0C133.3 0 66.7 0 33.3 0L0 0Z"
+                        fill="#101010" stroke-linecap="round" stroke-linejoin="miter"></path>
+                </g>
+                <g style="visibility: hidden;">
+                    <path id="background2"
+                    d="M0 434L33.3 448.8C66.7 463.7 133.3 493.3 200 469.8C266.7 446.3 333.3 369.7 400 319.8C466.7 270 533.3 247 600 272.3C666.7 297.7 733.3 371.3 800 372.2C866.7 373 933.3 301 1000 292.3C1066.7 283.7 1133.3 338.3 1200 371.5C1266.7 404.7 1333.3 416.3 1400 386.8C1466.7 357.3 1533.3 286.7 1566.7 251.3L1600 216L1600 0L1566.7 0C1533.3 0 1466.7 0 1400 0C1333.3 0 1266.7 0 1200 0C1133.3 0 1066.7 0 1000 0C933.3 0 866.7 0 800 0C733.3 0 666.7 0 600 0C533.3 0 466.7 0 400 0C333.3 0 266.7 0 200 0C133.3 0 66.7 0 33.3 0L0 0Z" fill="#1B1B1B" stroke-linecap="round" stroke-linejoin="miter"></path>
+                </g>
+            </svg>
+            <script>
+
+                const tween = KUTE.fromTo(
+                    '#background1',
+                    { path: '#background1' },
+                    { path: '#background2' },
+                    { repeat: 999, duration: 3000, yoyo: true }
+                )
+
+                tween.start()
+
+            </script>
+        </div>
+        <div class="intro_box glass">
+            <h1 id="name">
+                <span class="magic">João Bizzo</span>
+            </h1>
+            <!--img class="img" src="/img/foto_eu_quadrado.jpg" alt="Foto"-->
+            <h2>
+                machine learning and software engineering
+            </h2>
+            <div class="social_media">
+                <a href="https://github.com/joaobizzo" target="_blank">GitHub</a>
+                <a href="/img/JB-Curriculo-2024(Inglês).pdf" target="_blank">Curriculum</a>
+                <a href="https://www.linkedin.com/in/joao-brandt" target="_blank">Linkedin</a>
+            </div>
+        </div>
+        
+    </header>
+    <main class="projetos">
+        <div id="titulo_projetos">
+            <h1>Projects</h1>
+            <h2>click for more</h2>
+        </div>
+        <div id="cards">
+            <a href="https://github.com/joaobizzo/passwordGenarator" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53540995367_e0d0288be0_h.jpg" alt="p1_password_generator"/>
+                        </div>
+                        <div class="back_side">
+                            <h1>Password generator</h1>
+                            <p>
+                                A python script that generates a pseudo-random password with the length and complexity of your choice,
+                                and them saves it to a criptographed file (ising Cesar's cipher). The project was developed with the purpose of
+                                generating secure passwords and storing them in a secure way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/joaobizzo/license_plate" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53542197939_f162e05be4_h.jpg" alt="p2_license_plate"/>
+                        </div>
+                        <div class="back_side">
+                            <h1>License Plate Recognizer</h1>
+                            <p>
+                                I developed a license plate recognizer in Python using a YOLOV8 model to recognize the plates, 
+                                and OpenCV and OCR to extract the plate value. The project was developed with 
+                                the purpose of recognizing license plates in images and videos.
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/joaobizzo" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53542302325_0ff5193ae2_h.jpg" alt="p3_face_recognition"/>
+                        </div>
+                        <div class="back_side">
+                            <h1>Face Recognition</h1>
+                            <p>
+                                Legenda do projeto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, alias.
+                                Aspernatur, sit nemo possimus iste officiis quas ab doloribus quasi voluptatem a tenetur qui
+                                obcaecati impedit in, hic modi aliquam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/joaobizzo/joaobizzo.github.io" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53541872946_b1d247c1ce_h.jpg" alt="p4_website"/>
+                        </div>
+                        <div class="back_side">
+                            <h1>Personal Website</h1>
+                            <p>
+                                This website was developed with the purpose of showing my projects and skills. It was developed using
+                                HTML, CSS and JavaScript. In the process, I develop other versions (all available in my github) and
+                                learned a lot about web development in the way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/joaobizzo" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53540995357_473da6b3be_h.jpg" alt="p5_home_server"/>
+                        </div>
+                        <div class="back_side">
+                            <h1>Home Server</h1>
+                            <p>
+                                I developed a home server using a old laptop with Ubuntu Server. The server is used to store files and
+                                to run some services like a VPN, a web server and a file server, using open source projects. The project was 
+                                developed with the purpose of learning about servers and networking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/joaobizzo" target="_blank">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="front_side">
+                            <img id="img" src="https://live.staticflickr.com/65535/53540995352_f8c78c2763_h.jpg" alt="Project image">
+                        </div>
+                        <div class="back_side">
+                            <h1>Project under construction</h1>
+                            <p>
+                                You're still early.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <script>
+            document.getElementById("cards").onmousemove = e => {
+                for(const card of document.getElementsByClassName("card")) {
+                    const rect = card.getBoundingClientRect(),
+                        x = e.clientX - rect.left,
+                        y = e.clientY - rect.top;
+            
+                    card.style.setProperty("--mouse-x", `${x}px`),
+                    card.style.setProperty("--mouse-y", `${y}px`);
+            
+                }
+            }
+            
+            const coords = { x: 0, y: 0 };
+            const circles = document.querySelectorAll(".circle");
+            
+            const colors = [
+                "#673ab7",
+                "#6d3bb7",
+                "#7c3db5",
+                "#9042b4",
+                "#a549b2",
+                "#b953af",
+                "#cb60ae",
+                "#da6dae",
+                "#e57aae",
+                "#ed85af",
+                "#f28cb0",
+                "#f48fb1"
+            ];
+            
+            circles.forEach(function (circle, index) {
+              circle.x = 0;
+              circle.y = 0;
+              circle.style.backgroundColor = colors[index % colors.length];
+            });
+            
+            window.addEventListener("mousemove", function(e){
+              coords.x = e.clientX;
+              coords.y = e.clientY;
+            
+            });
+            
+            function animateCircles() {
+            
+              let x = coords.x;
+              let y = coords.y;
+            
+              circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+            
+                circle.style.scale = (circles.length - index) / circles.length;
+            
+                circle.x = x;
+                circle.y = y;
+            
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+              });
+            
+              requestAnimationFrame(animateCircles);
+            }
+            
+            animateCircles();
+        </script>
+    </main>
+    <footer>
+        <div id="rodape">
+            desenvolvido por João Bizzo
+        </div>
+    </footer>
+</body>
+
+</html>
